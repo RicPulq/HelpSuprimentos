@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewer.CadastroRelatorio">
+
+    <EditText
+        android:id="@+id/edtUsuarioUUID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Usuário UUID"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/edtTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_below="@id/edtUsuarioUUID"
+        android:hint="Tipo do Relatório"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/edtConteudo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_below="@id/edtTipo"
+        android:hint="Conteúdo"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btnSalvarPonto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_centerHorizontal="true"
+        android:text="Salvar"
+        android:layout_below="@id/edtConteudo"
+        android:layout_marginTop="16dp"
+        />
+
+</RelativeLayout>

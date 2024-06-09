@@ -1,11 +1,12 @@
 package com.example.mankey.helpsuprimentos.model;
 
 public class ServicoMedico {
+    private String id;
     private String usuarioUUID;
     private String localizacao;
     private String tipoAtendimento;
 
-    public ServicoMedico(String usuarioUUID, String localizacao, String tipoAtendimento) {
+    public ServicoMedico(String id, String usuarioUUID, String localizacao, String tipoAtendimento) {
         this.usuarioUUID = usuarioUUID;
         this.localizacao = localizacao;
         this.tipoAtendimento = tipoAtendimento;

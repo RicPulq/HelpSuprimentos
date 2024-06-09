@@ -4,52 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewer.CadastroArmazem">
+    tools:context=".viewer.CadastroEntrega">
 
     <EditText
-        android:id="@+id/edtNomeArmazem"
+        android:id="@+id/edtStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:hint="Nome do Armazem"
+        android:hint="Status"
         android:gravity="center"
         />
 
     <EditText
-        android:id="@+id/edtLocalizacao"
+        android:id="@+id/edtASuprimentoUUID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_below="@id/edtNomeArmazem"
-        android:hint="Coordenadas do Ponto de Distribuição"
+        android:layout_below="@id/edtStatus"
+        android:hint="SuprimentoUUID"
         android:gravity="center"
         />
 
     <EditText
-        android:id="@+id/edtResponsavelUUID"
+        android:id="@+id/edtAPontoDistribuicaoUUID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_below="@id/edtLocalizacao"
-        android:hint="UUID do Responsável pelo Armazém "
+        android:layout_below="@id/edtASuprimentoUUID"
+        android:hint="PontoDistribuicaoUUID"
         android:gravity="center"
         />
 
     <Button
-        android:id="@+id/btnSalvarArmazem"
+        android:id="@+id/btnSalvarEntrega"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
-        android:text="Salvar"
-        android:layout_below="@id/edtResponsavelUUID"
-        android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
+        android:text="Salvar"
+        android:layout_below="@id/edtAPontoDistribuicaoUUID"
+        android:layout_marginTop="16dp"
         />
 
 </RelativeLayout>

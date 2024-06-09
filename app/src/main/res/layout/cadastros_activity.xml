@@ -39,4 +39,48 @@
         android:layout_centerHorizontal="true"
         />
 
+    <Button
+        android:id="@+id/btnCadastrarRelatorio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="128dp"
+        android:text="Cadastrar Relatório"
+        android:layout_below="@id/btnCadastrarArmazem"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btnCadastrarServicoMedico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="128dp"
+        android:text="Cadastrar Serviço Médico"
+        android:layout_below="@id/btnCadastrarRelatorio"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btnCadastrarSuprimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="128dp"
+        android:text="Cadastrar Suprimento"
+        android:layout_below="@id/btnCadastrarServicoMedico"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btnCadastrarEntrega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="128dp"
+        android:text="Cadastrar Entrega"
+        android:layout_below="@id/btnCadastrarSuprimento"
+        android:layout_centerHorizontal="true"
+        />
+
 </RelativeLayout>

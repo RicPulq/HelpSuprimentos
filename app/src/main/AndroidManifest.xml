@@ -21,16 +21,29 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".viewer.CadastroEntrega"
+            android:exported="true"/>
+        <activity
+            android:name=".viewer.CadastroSuprimento"
+            android:exported="true"
+            />
+        <activity
+            android:name=".viewer.CadastroServicoMedico"
+            android:exported="true"
+            />
+        <activity
             android:name=".viewer.CadastroArmazem"
             android:exported="true"
             />
+        <activity
+            android:name=".viewer.CadastroRelatorio"
+            android:exported="true"/>
         <activity
             android:name=".controller.FormCadastro"
             android:exported="true"/>
         <activity
             android:name=".controller.MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".controller.CadastrosActivity"
             android:exported="true"/>

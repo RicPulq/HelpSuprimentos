@@ -48,7 +48,7 @@
     <EditText
         android:id="@+id/edit_senha"
         style="@style/Edit_Text"
-        android:hint="Email"
+        android:hint="Senha"
         android:drawableRight="@drawable/ic_eye"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="@+id/containerComponents"

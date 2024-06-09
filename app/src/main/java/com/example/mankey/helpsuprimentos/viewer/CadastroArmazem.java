@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mankey.helpsuprimentos.R;
 import com.example.mankey.helpsuprimentos.model.Armazem;
-import com.example.mankey.helpsuprimentos.model.Role;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,12 +29,12 @@ public class CadastroArmazem extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.armazem);
+        setContentView(R.layout.armazem_cadastro);
 
         edtNomeArmazem = findViewById(R.id.edtNomeArmazem);
         edtLocalizacao = findViewById(R.id.edtLocalizacao);
         edtResponsavelUUID = findViewById(R.id.edtResponsavelUUID);
-
+        btnSalvarArmazem = findViewById(R.id.btnSalvarArmazem);
         databaseReference = FirebaseDatabase.getInstance().getReference("armazem");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -74,11 +73,11 @@ public class CadastroArmazem extends AppCompatActivity {
             databaseReference.child("Role" + index).setValue(role);
 
             // Exibe uma mensagem de sucesso
-            Toast.makeText(this, "Role salva!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Armazem salvo!", Toast.LENGTH_SHORT).show();
             finish(); // Encerra a atividade
         } else {
             // Exibe uma mensagem de erro caso o nome da categoria esteja vazio
-            Toast.makeText(this, "Digite o nome da Role!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Erro!", Toast.LENGTH_SHORT).show();
         }
     }
 }

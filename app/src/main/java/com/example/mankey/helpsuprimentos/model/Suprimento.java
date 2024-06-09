@@ -1,14 +1,17 @@
 package com.example.mankey.helpsuprimentos.model;
 
 public class Suprimento {
+    private String id;
     private String nome;
-    private int quantidade;
+    private String quantidade;
     private String armazemUUID;
+    private String data;
 
-    public Suprimento(String nome, int quantidade, String armazemUUID) {
+    public Suprimento(String id, String nome, String quantidade, String armazemUUID, String data) {
         this.nome = nome;
         this.quantidade = quantidade;
         this.armazemUUID = armazemUUID;
+        this.data = data;
     }
 
     public String getNome() {
@@ -19,11 +22,11 @@ public class Suprimento {
         this.nome = nome;
     }
 
-    public int getQuantidade() {
+    public String getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
+    public void setQuantidade(String quantidade) {
         this.quantidade = quantidade;
     }
 
@@ -33,5 +36,21 @@ public class Suprimento {
 
     public void setArmazemUUID(String armazemUUID) {
         this.armazemUUID = armazemUUID;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 }

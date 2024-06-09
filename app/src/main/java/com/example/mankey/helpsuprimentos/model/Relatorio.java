@@ -4,13 +4,13 @@ public class Relatorio {
     private String usuarioUUID;
     private String tipo;
     private String conteudo;
-    private String dataCriaocao;
+    private String dataCriacao;
 
-    public Relatorio(String usuarioUUID, String tipo, String conteudo, String dataCriaocao) {
+    public Relatorio(String usuarioUUID, String tipo, String conteudo, String dataCriacao) {
         this.usuarioUUID = usuarioUUID;
         this.tipo = tipo;
         this.conteudo = conteudo;
-        this.dataCriaocao = dataCriaocao;
+        this.dataCriacao = dataCriacao;
     }
 
     public String getUsuarioUUID() {
@@ -38,10 +38,10 @@ public class Relatorio {
     }
 
     public String getDataCriaocao() {
-        return dataCriaocao;
+        return dataCriacao;
     }
 
     public void setDataCriaocao(String dataCriaocao) {
-        this.dataCriaocao = dataCriaocao;
+        this.dataCriacao = dataCriaocao;
     }
 }

@@ -28,7 +28,7 @@ public class CadastroPontoDistribuicao extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ponto_distribuicao);
+        setContentView(R.layout.ponto_distribuicao_cadastro);
 
         // Inicialização dos componentes da interface
         edtNomePonto = findViewById(R.id.edtNomePonto);
@@ -73,7 +73,7 @@ public class CadastroPontoDistribuicao extends AppCompatActivity {
             PontoDistribuicao pontoDistribuicao = new PontoDistribuicao("Ponto"+index, nomeDistribuicao, coordenadasDistribuicao);
 
             // Salva a categoria no Firebase usando o índice como chave
-            databaseReference.child("Ponto"+index).setValue(coordenadasDistribuicao);
+            databaseReference.child("Ponto"+index).setValue(pontoDistribuicao);
 
             // Exibe uma mensagem de sucesso
             Toast.makeText(this, "Ponto de Distribuição cadastrado!", Toast.LENGTH_SHORT).show();

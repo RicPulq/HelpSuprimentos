@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewer.CadastroServicoMedico">
+
+    <EditText
+        android:id="@+id/edtUsuarioUUID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Usuário UUID"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/edtLocalizacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_below="@id/edtUsuarioUUID"
+        android:hint="Localização"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/edtTipoAtendimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_below="@id/edtLocalizacao"
+        android:hint="Tipo de Atendimento"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btnSalvarServico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_centerHorizontal="true"
+        android:text="Salvar"
+        android:layout_below="@id/edtTipoAtendimento"
+        android:layout_marginTop="16dp"
+        />
+
+</RelativeLayout>
