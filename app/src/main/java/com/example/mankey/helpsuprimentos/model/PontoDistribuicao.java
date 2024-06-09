@@ -1,20 +1,21 @@
 package com.example.mankey.helpsuprimentos.model;
 
 public class PontoDistribuicao {
-    private String localizacao;
+    private String id;
+    private String nome;
     private String coordenadas;
 
-    public PontoDistribuicao(String localizacao, String coordenadas) {
-        this.localizacao = localizacao;
+    public PontoDistribuicao(String id, String nome, String coordenadas) {
+        this.nome = nome;
         this.coordenadas = coordenadas;
     }
 
-    public String getLocalizacao() {
-        return localizacao;
+    public String getNome() {
+        return nome;
     }
 
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getCoordenadas() {

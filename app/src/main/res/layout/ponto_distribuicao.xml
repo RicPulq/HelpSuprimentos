@@ -4,28 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewer.CadastrarRole">
+    tools:context=".viewer.CadastroPontoDistribuicao">
 
     <EditText
-        android:id="@+id/edtNomeRole"
+        android:id="@+id/edtNomePonto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:hint="Nome da Role"
+        android:hint="Nome do Ponto de Distribuição"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/edtCoordenadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_below="@id/edtNomePonto"
+        android:hint="Coordenadas do Ponto de Distribuição"
         android:gravity="center"
         />
 
     <Button
-        android:id="@+id/btnSalvarRole"
+        android:id="@+id/btnSalvarPonto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
-        android:text="Salvar"
-        android:layout_below="@id/edtNomeRole"
-        android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
+        android:text="Salvar"
+        android:layout_below="@id/edtCoordenadas"
+        android:layout_marginTop="16dp"
         />
 
 </RelativeLayout>

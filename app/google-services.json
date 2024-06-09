@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "619993760947",
+    "project_id": "helpsuprimentos-c786c",
+    "storage_bucket": "helpsuprimentos-c786c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619993760947:android:38ca68fec58301b33e9cc6",
+        "android_client_info": {
+          "package_name": "com.example.mankey.helpsuprimentos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5_FCzseFLSwNcPzE6z2cpOrwzkcZ0kKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619993760947:android:828137257e0ba0fa3e9cc6",
+        "android_client_info": {
+          "package_name": "com.monkey.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5_FCzseFLSwNcPzE6z2cpOrwzkcZ0kKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,40 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.MainActivity">
+    tools:context=".controller.CadastrosActivity">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/logo"
-        android:layout_gravity="center"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_centerHorizontal="true"
-        app:layout_constraintTop_toTopOf="parent"
-        />
 
     <Button
-        android:id="@+id/btnCadastrar"
+        android:id="@+id/btnCadastrarRole"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:layout_marginStart="128dp"
-        android:text="Cadastrar"
-        android:layout_below="@id/logo"
+        android:text="Cadastrar Role"
         android:layout_centerHorizontal="true"
         />
 
     <Button
-        android:id="@+id/btnVisualizar"
+        android:id="@+id/btnCadastrarPontoDistribuicao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginStart="128dp"
-        android:text="Visualizar"
-        android:layout_below="@id/btnCadastrar"
+        android:text="Cadastrar Ponto de Distribuicao"
+        android:layout_below="@id/btnCadastrarRole"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btnCadastrarArmazem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="128dp"
+        android:text="Cadastrar Armazem"
+        android:layout_below="@id/btnCadastrarPontoDistribuicao"
         android:layout_centerHorizontal="true"
         />
 

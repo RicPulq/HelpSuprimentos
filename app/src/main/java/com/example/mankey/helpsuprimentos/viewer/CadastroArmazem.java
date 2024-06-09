@@ -7,71 +7,68 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mankey.helpsuprimentos.R;
+import com.example.mankey.helpsuprimentos.model.Armazem;
 import com.example.mankey.helpsuprimentos.model.Role;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class CadastrarRole extends AppCompatActivity {
-    private EditText edtNomeRole;
-    private Button btnSalvarRole;
+public class CadastroArmazem extends AppCompatActivity {
+    private EditText edtNomeArmazem;
+    private EditText edtLocalizacao;
+    private EditText edtResponsavelUUID;
+    private Button btnSalvarArmazem;
     private DatabaseReference databaseReference; // Referência para o banco de dados do Firebase
-    private int roleIndex; // Variável para armazenar o índice atual das categorias
-    private int accessLevel; // Variável para armazenar o nível de acesso
+    private int armazemIndex; // Variável para armazenar o índice atual das categorias
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.role_cadastro); // Define o layout da atividade
+        setContentView(R.layout.armazem);
 
-        // Inicialização dos componentes da interface
-        edtNomeRole = findViewById(R.id.edtNomeRole);
-        btnSalvarRole = findViewById(R.id.btnSalvarRole);
+        edtNomeArmazem = findViewById(R.id.edtNomeArmazem);
+        edtLocalizacao = findViewById(R.id.edtLocalizacao);
+        edtResponsavelUUID = findViewById(R.id.edtResponsavelUUID);
 
-        // Inicialização a referência do Firebase
-        databaseReference = FirebaseDatabase.getInstance().getReference("role");
+        databaseReference = FirebaseDatabase.getInstance().getReference("armazem");
 
-        // Obtém o índice atual de role do Firebase
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 // Atualiza a variável roleIndex com o número de role existentes
-                roleIndex = (int) snapshot.getChildrenCount();
+                armazemIndex = (int) snapshot.getChildrenCount();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 // Tratar possíveis erros ao acessar o Firebase
             }
         });
-
-        // Define a ação do botão salvar
-        btnSalvarRole.setOnClickListener(new View.OnClickListener() {
+        btnSalvarArmazem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                salvarRole(); // Chama o método para salvar a categoria
+                salvarArmazem(); // Chama o método para salvar a categoria
             }
         });
     }
-
-    // Método para salvar a categoria no Firebase
-    private void salvarRole(){
+    private void salvarArmazem(){
         // Obtém o nome da categoria do campo de entrada de texto
-        String nomeRole = edtNomeRole.getText().toString().trim();
+        String nomeArmazem = edtNomeArmazem.getText().toString().trim();
+        String responsavelUUID = edtResponsavelUUID.getText().toString().trim();
+        String localizacao = edtLocalizacao.getText().toString().trim();
 
         // Verificar se o nome da categoria não está vazio
-        if (!nomeRole.isEmpty()){
+        if (!nomeArmazem.isEmpty()){
             // Incrementa o índice da categoria para criar uma nova categoria
-            final int index = roleIndex + 1;
-            final int nivelAccess = accessLevel + 1;
+            final int index = armazemIndex + 1;
 
             // Cria um objeto Categoria com o índice e nome fornecidos
-            Role role = new Role("Role" + index, nomeRole, nivelAccess);
+            Armazem role = new Armazem("Armazem" + index, responsavelUUID, nomeArmazem, localizacao);
 
             // Salva a categoria no Firebase usando o índice como chave
             databaseReference.child("Role" + index).setValue(role);

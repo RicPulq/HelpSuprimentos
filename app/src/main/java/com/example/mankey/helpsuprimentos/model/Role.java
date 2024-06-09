@@ -1,10 +1,12 @@
 package com.example.mankey.helpsuprimentos.model;
 
 public class Role {
+    private String id;
     private String nome;
     private int nivelAcesso;
 
-    public Role(String nome, int nivelAcesso) {
+    public Role(String id, String nome, int nivelAcesso) {
+        this.id = id;
         this.nome = nome;
         this.nivelAcesso = nivelAcesso;
     }
@@ -23,5 +25,13 @@ public class Role {
 
     public void setNivelAcesso(int nivelAcesso) {
         this.nivelAcesso = nivelAcesso;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

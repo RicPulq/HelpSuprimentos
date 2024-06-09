@@ -1,14 +1,31 @@
 package com.example.mankey.helpsuprimentos.model;
 
 public class Armazem {
+    private String id;
     private String usuarioUUID;
-    private String localozacao;
-    private String dataAtualizacao;
+    private String nome;
+    private String localizacao;
 
-    public Armazem(String usuarioUUID, String localozacao, String dataAtualizacao) {
+    public Armazem(String id, String usuarioUUID, String nome, String localizacao) {
+        this.nome = nome;
         this.usuarioUUID = usuarioUUID;
-        this.localozacao = localozacao;
-        this.dataAtualizacao = dataAtualizacao;
+        this.localizacao = localizacao;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getUsuarioUUID() {
@@ -19,19 +36,11 @@ public class Armazem {
         this.usuarioUUID = usuarioUUID;
     }
 
-    public String getLocalozacao() {
-        return localozacao;
+    public String getLocalizacao() {
+        return localizacao;
     }
 
-    public void setLocalozacao(String localozacao) {
-        this.localozacao = localozacao;
-    }
-
-    public String getDataAtualizacao() {
-        return dataAtualizacao;
-    }
-
-    public void setDataAtualizacao(String dataAtualizacao) {
-        this.dataAtualizacao = dataAtualizacao;
+    public void setLocalizacao(String localozacao) {
+        this.localizacao = localozacao;
     }
 }
