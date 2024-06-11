@@ -70,7 +70,7 @@ public class CadastroArmazem extends AppCompatActivity {
             Armazem role = new Armazem("Armazem" + index, responsavelUUID, nomeArmazem, localizacao);
 
             // Salva a categoria no Firebase usando o índice como chave
-            databaseReference.child("Role" + index).setValue(role);
+            databaseReference.child("Armazem" + index).setValue(role);
 
             // Exibe uma mensagem de sucesso
             Toast.makeText(this, "Armazem salvo!", Toast.LENGTH_SHORT).show();

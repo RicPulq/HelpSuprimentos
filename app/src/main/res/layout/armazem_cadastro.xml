@@ -1,55 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewer.CadastroArmazem">
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewer.CadastroArmazem"
+    android:background="@drawable/background">
 
-    <EditText
-        android:id="@+id/edtNomeArmazem"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Usuário UUID"
-        android:gravity="center"
+        android:text="Cadastro de Armazem"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        android:textSize="27dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         />
-
-    <EditText
-        android:id="@+id/edtLocalizacao"
+    <View
+        android:id="@+id/containerComponents"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_below="@id/edtNomeArmazem"
-        android:hint="Nome Armazem"
-        android:gravity="center"
+        android:layout_height="255dp"
+        android:background="@drawable/container_components"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         />
 
     <EditText
         android:id="@+id/edtResponsavelUUID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_below="@id/edtLocalizacao"
+        style="@style/Edit_Text"
+        android:gravity="center"
+        android:hint="Usuário UUID"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents" />
+
+    <EditText
+        android:id="@+id/edtNomeArmazem"
+        style="@style/Edit_Text"
+        android:layout_below="@id/edtResponsavelUUID"
+        android:hint="Nome Armazem"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/edtResponsavelUUID"
+        />
+
+    <EditText
+        android:id="@+id/edtLocalizacao"
+        style="@style/Edit_Text"
+        android:layout_below="@id/edtNomeArmazem"
         android:hint="Localização"
         android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/edtNomeArmazem"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSalvarArmazem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
+        style="@style/Button2"
         android:layout_centerHorizontal="true"
         android:text="Salvar"
-        android:layout_below="@id/edtResponsavelUUID"
-        android:layout_marginTop="16dp"
+        android:textColor="@color/purple_700"
+        app:layout_constraintTop_toBottomOf="@+id/containerComponents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         />
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -4,13 +4,36 @@ public class Usuario {
     private String id;
     private String nome;
     private String email;
+    private String cpf;
     private String role_uuid;
+    private String senha;
 
-    public Usuario(String id, String nome, String email, String role_uuid) {
+    public Usuario() {
+    }
+
+    public Usuario(String id, String nome, String email, String role_uuid, String senha, String cpf) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.role_uuid = role_uuid;
+        this.senha = senha;
+        this.cpf = cpf;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public String getId() {

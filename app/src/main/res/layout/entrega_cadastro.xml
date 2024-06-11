@@ -1,55 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".viewer.CadastroEntrega">
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de Entrega"
+        android:textColor="@color/purple_500"
+        android:textStyle="bold"
+        android:textSize="27dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <View
+        android:id="@+id/containerComponents"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/container_components"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        />
 
     <EditText
         android:id="@+id/edtStatus"
+        style="@style/Edit_Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="35dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:hint="Status"
+        android:hint="Status da Entrega"
         android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintTop_toTopOf="@+id/containerComponents"
         />
 
     <EditText
         android:id="@+id/edtASuprimentoUUID"
+        style="@style/Edit_Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_below="@id/edtStatus"
-        android:hint="SuprimentoUUID"
+        android:layout_below="@id/edtNomePonto"
+        android:hint="Suprimento UUID"
         android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/edtStatus"
         />
 
     <EditText
         android:id="@+id/edtAPontoDistribuicaoUUID"
+        style="@style/Edit_Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_below="@id/edtASuprimentoUUID"
-        android:hint="PontoDistribuicaoUUID"
+        android:layout_below="@id/edtNomePonto"
+        android:hint="Ponto de Distribuição UUID"
         android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/edtASuprimentoUUID"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSalvarEntrega"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
+        style="@style/Button2"
         android:layout_centerHorizontal="true"
         android:text="Salvar"
-        android:layout_below="@id/edtAPontoDistribuicaoUUID"
-        android:layout_marginTop="16dp"
+        android:textColor="@color/purple_700"
+        app:layout_constraintTop_toBottomOf="@+id/containerComponents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
-</RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -4,81 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.CadastrosActivity">
+    tools:context=".controller.CadastrosActivity"
+    android:background="@drawable/background"
+    >
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCadastrarRole"
+        style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginStart="128dp"
+        app:layout_constraintTop_toTopOf="parent"
         android:text="Cadastrar Role"
+        android:textColor="@color/purple_500"
         android:layout_centerHorizontal="true"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCadastrarPontoDistribuicao"
+        style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="128dp"
         android:text="Cadastrar Ponto de Distribuicao"
+        android:textColor="@color/purple_500"
         android:layout_below="@id/btnCadastrarRole"
         android:layout_centerHorizontal="true"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCadastrarArmazem"
+        style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="128dp"
         android:text="Cadastrar Armazem"
+        android:textColor="@color/purple_500"
         android:layout_below="@id/btnCadastrarPontoDistribuicao"
         android:layout_centerHorizontal="true"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCadastrarRelatorio"
+        style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="128dp"
         android:text="Cadastrar Relatório"
+        android:textColor="@color/purple_500"
         android:layout_below="@id/btnCadastrarArmazem"
         android:layout_centerHorizontal="true"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCadastrarServicoMedico"
+        style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="128dp"
         android:text="Cadastrar Serviço Médico"
+        android:textColor="@color/purple_500"
         android:layout_below="@id/btnCadastrarRelatorio"
         android:layout_centerHorizontal="true"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCadastrarSuprimento"
+        style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="128dp"
         android:text="Cadastrar Suprimento"
+        android:textColor="@color/purple_500"
         android:layout_below="@id/btnCadastrarServicoMedico"
         android:layout_centerHorizontal="true"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCadastrarEntrega"
+        style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="128dp"
         android:text="Cadastrar Entrega"
+        android:textColor="@color/purple_500"
         android:layout_below="@id/btnCadastrarSuprimento"
         android:layout_centerHorizontal="true"
         />
