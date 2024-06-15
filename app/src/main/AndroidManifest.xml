@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +15,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelpSuprimentos"
         tools:targetApi="31">
-        <activity android:name=".controller.FormLogin"
+        <activity
+            android:name=".GetEntrega"
+            android:exported="false" />
+        <activity
+            android:name=".viewer.GetArmazem"
+            android:exported="false" />
+        <activity
+            android:name=".get_role"
+            android:exported="false" />
+        <activity
+            android:name=".viewer.GetUser"
+            android:exported="false" />
+        <activity
+            android:name=".controller.FormLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,31 +38,31 @@
         </activity>
         <activity
             android:name=".viewer.CadastroEntrega"
-            android:exported="true"/>
+            android:exported="true" />
+        <activity
+            android:name=".viewer.GetRole"
+            android:exported="true" />
         <activity
             android:name=".viewer.CadastroSuprimento"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".viewer.CadastroServicoMedico"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".viewer.CadastroArmazem"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".viewer.CadastroRelatorio"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".viewer.FormCadastro"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".controller.MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".controller.CadastrosActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".viewer.CadastrarRole"
             android:exported="true" />

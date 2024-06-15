@@ -1,15 +1,20 @@
 package com.example.mankey.helpsuprimentos.model;
 
-public class Armazem {
+public class Armazem extends Localizacao{
+
     private String id;
     private String usuarioUUID;
     private String nome;
-    private String localizacao;
+//    private String localizacao;
 
-    public Armazem(String id, String usuarioUUID, String nome, String localizacao) {
+    public Armazem(String id, String usuarioUUID, String nome, String localizacao, double latitude, double longitude) {
+        super(latitude, longitude);
         this.nome = nome;
         this.usuarioUUID = usuarioUUID;
-        this.localizacao = localizacao;
+//        this.localizacao = localizacao;
+        this.setLocalizacao(localizacao);
+        this.setLatitude(latitude);
+        this.setLongitude(longitude);
     }
 
     public String getNome() {
@@ -36,11 +41,15 @@ public class Armazem {
         this.usuarioUUID = usuarioUUID;
     }
 
-    public String getLocalizacao() {
-        return localizacao;
+    public String getLocalizacaoString() {
+        return getLocalizacao();
     }
 
-    public void setLocalizacao(String localozacao) {
-        this.localizacao = localozacao;
-    }
+//    public String getLocalizacao() {
+//        return localizacao;
+//    }
+//
+//    public void setLocalizacao(String localozacao) {
+//        this.localizacao = localozacao;
+//    }
 }
