@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.CadastrosActivity"
+    tools:context=".controller.VisualizarActivity"
     android:background="@drawable/background"
     >
 
@@ -24,7 +24,7 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCadastrarRole"
+        android:id="@+id/btnVisualizarRole"
         style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,68 +36,68 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCadastrarPontoDistribuicao"
+        android:id="@+id/btnVisualizarPontoDistribuicao"
         style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ponto de Distribuicao"
         android:textColor="@color/purple_500"
-        android:layout_below="@id/btnCadastrarRole"
+        android:layout_below="@id/btnVisualizarRole"
         android:layout_centerHorizontal="true"
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCadastrarArmazem"
+        android:id="@+id/btnVisualizarArmazem"
         style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Armazem"
         android:textColor="@color/purple_500"
-        android:layout_below="@id/btnCadastrarPontoDistribuicao"
+        android:layout_below="@id/btnVisualizarPontoDistribuicao"
         android:layout_centerHorizontal="true"
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCadastrarRelatorio"
+        android:id="@+id/btnVisualizarRelatorio"
         style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Relatório"
         android:textColor="@color/purple_500"
-        android:layout_below="@id/btnCadastrarArmazem"
+        android:layout_below="@id/btnVisualizarArmazem"
         android:layout_centerHorizontal="true"
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCadastrarServicoMedico"
+        android:id="@+id/btnVisualizarServicoMedico"
         style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Serviço Médico"
         android:textColor="@color/purple_500"
-        android:layout_below="@id/btnCadastrarRelatorio"
+        android:layout_below="@id/btnVisualizarRelatorio"
         android:layout_centerHorizontal="true"
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCadastrarSuprimento"
+        android:id="@+id/btnVisualizarSuprimento"
         style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Suprimento"
         android:textColor="@color/purple_500"
-        android:layout_below="@id/btnCadastrarServicoMedico"
+        android:layout_below="@id/btnVisualizarServicoMedico"
         android:layout_centerHorizontal="true"
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCadastrarEntrega"
+        android:id="@+id/btnVisualizarEntrega"
         style="@style/Button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Entrega"
         android:textColor="@color/purple_500"
-        android:layout_below="@id/btnCadastrarSuprimento"
+        android:layout_below="@id/btnVisualizarSuprimento"
         android:layout_centerHorizontal="true"
         />
 

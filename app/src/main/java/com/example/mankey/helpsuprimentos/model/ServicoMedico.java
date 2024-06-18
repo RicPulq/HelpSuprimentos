@@ -1,15 +1,18 @@
 package com.example.mankey.helpsuprimentos.model;
 
-public class ServicoMedico {
+public class ServicoMedico extends Localizacao {
     private String id;
     private String usuarioUUID;
     private String localizacao;
     private String tipoAtendimento;
 
-    public ServicoMedico(String id, String usuarioUUID, String localizacao, String tipoAtendimento) {
+    public ServicoMedico(String id, String usuarioUUID, String localizacao, String tipoAtendimento, double latitude, double longitude) {
         this.usuarioUUID = usuarioUUID;
-        this.localizacao = localizacao;
+//        this.localizacao = localizacao;
         this.tipoAtendimento = tipoAtendimento;
+        this.setLocalizacao(localizacao);
+        this.setLatitude(latitude);
+        this.setLongitude(longitude);
     }
 
     public String getUsuarioUUID() {
@@ -35,4 +38,8 @@ public class ServicoMedico {
     public void setTipoAtendimento(String tipoAtendimento) {
         this.tipoAtendimento = tipoAtendimento;
     }
+    public String getLocalizacaoString() {
+        return getLocalizacao();
+    }
+
 }

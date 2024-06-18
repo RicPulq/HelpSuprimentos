@@ -1,4 +1,4 @@
-package com.example.mankey.helpsuprimentos;
+package com.example.mankey.helpsuprimentos.viewer;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,24 +10,34 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.example.mankey.helpsuprimentos.viewer.GetArmazem;
+import com.example.mankey.helpsuprimentos.DataClass.IEntrega;
+import com.example.mankey.helpsuprimentos.R;
+import com.example.mankey.helpsuprimentos.controller.AdapterEntregaRow;
+import com.example.mankey.helpsuprimentos.databinding.ActivityGetEntregaBinding;
+import com.example.mankey.helpsuprimentos.model.Entrega;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class GetEntrega extends AppCompatActivity {
     DatabaseReference databaseReference;
+    ActivityGetEntregaBinding binding;
+    private Entrega entrega;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_get_entrega);
+
+        entrega = new Entrega();
+        binding = ActivityGetEntregaBinding.inflate(getLayoutInflater());
+
         EditText etEntrega = findViewById(R.id.etEntrega);
         Button result = findViewById(R.id.consultaEntrega);
 
@@ -44,6 +54,8 @@ public class GetEntrega extends AppCompatActivity {
             }
 
         });
+
+//        loadFeed();
     }
 
     private void leituraBD(String entrega) {
@@ -82,4 +94,19 @@ public class GetEntrega extends AppCompatActivity {
             }
         });
     }
+
+//    private void loadFeed() {
+//
+//        ArrayList<IEntrega> entregaList = new ArrayList<IEntrega>();
+//        this.entrega.getEntregas(entregaList, new Runnable() {
+//            @Override
+//            public void run() {
+//                Collections.reverse(entregaList);
+//                AdapterEntregaRow adapterEntrega = new AdapterEntregaRow(GetEntrega.this, entregaList);
+//                binding.entregaRV.setAdapter(adapterEntrega);
+//                adapterEntrega.notifyDataSetChanged();
+//            }
+//        });
+//    }
+
 }

@@ -28,7 +28,7 @@
         <View
             android:id="@+id/containerComponents"
             android:layout_width="match_parent"
-            android:layout_height="255dp"
+            android:layout_height="260dp"
             android:background="@drawable/container_components"
             android:layout_margin="20dp"
             app:layout_constraintTop_toBottomOf="@+id/title"
@@ -64,7 +64,26 @@
             app:layout_constraintEnd_toEndOf="@+id/containerComponents"
             app:layout_constraintTop_toBottomOf="@+id/edtNomePonto"
             />
+        <Button
+            android:id="@+id/btnLocalizacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar\nLatitude e Longitude"
+            android:textStyle="bold"
+            android:onClick="buscarInformacoesGPS"
+            app:layout_constraintTop_toBottomOf="@+id/edtCoordenadas"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            />
 
+        <WebView
+            android:id="@+id/webv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintStart_toStartOf="@+id/containerComponents"
+            app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/btnLocalizacao"
+            />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSalvarPonto"
             style="@style/Button2"
@@ -72,7 +91,7 @@
             android:layout_height="wrap_content"
             android:text="Salvar"
             android:textColor="@color/purple_500"
-            app:layout_constraintTop_toBottomOf="@+id/containerComponents"
+            app:layout_constraintTop_toBottomOf="@+id/webv"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />

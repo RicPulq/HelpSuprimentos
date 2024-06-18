@@ -5,17 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.example.mankey.helpsuprimentos.GetEntrega;
+import com.example.mankey.helpsuprimentos.viewer.GetServicoMedico;
 import com.example.mankey.helpsuprimentos.R;
-import com.example.mankey.helpsuprimentos.viewer.CadastrarRole;
-import com.example.mankey.helpsuprimentos.viewer.GetArmazem;
-import com.example.mankey.helpsuprimentos.viewer.GetRole;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -39,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Visualizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, GetEntrega.class));
+                startActivity(new Intent(MainActivity.this, VisualizarActivity.class));
             }
         });
 

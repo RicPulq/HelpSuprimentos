@@ -16,7 +16,22 @@
         android:theme="@style/Theme.HelpSuprimentos"
         tools:targetApi="31">
         <activity
-            android:name=".GetEntrega"
+            android:name=".controller.VisualizarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewer.GetServicoMedico"
+            android:exported="false" />
+        <activity
+            android:name=".viewer.GetSuprimento"
+            android:exported="false" />
+        <activity
+            android:name=".viewer.GetRelatorio"
+            android:exported="false" />
+        <activity
+            android:name=".viewer.GetPontoDistribuicao"
+            android:exported="false" />
+        <activity
+            android:name=".viewer.GetEntrega"
             android:exported="false" />
         <activity
             android:name=".viewer.GetArmazem"

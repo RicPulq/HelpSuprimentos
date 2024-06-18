@@ -89,7 +89,7 @@ public class CadastroArmazem extends AppCompatActivity implements LocationListen
         String responsavelUUID = edtResponsavelUUID.getText().toString().trim();
         String localizacao = edtLocalizacao.getText().toString().trim();
         double longitute = currentLongitude;
-        double lantitude = currentLatitude;
+        double latitude = currentLatitude;
 
         // Verificar se o nome da categoria não está vazio
         if (!nomeArmazem.isEmpty()){
@@ -97,7 +97,7 @@ public class CadastroArmazem extends AppCompatActivity implements LocationListen
             final int index = armazemIndex + 1;
 
             // Cria um objeto Categoria com o índice e nome fornecidos
-            Armazem role = new Armazem("Armazem" + index, responsavelUUID, nomeArmazem, localizacao, lantitude, longitute);
+            Armazem role = new Armazem("Armazem" + index, responsavelUUID, nomeArmazem, localizacao, latitude, longitute);
 
             // Salva a categoria no Firebase usando o índice como chave
             databaseReference.child("Armazem" + index).setValue(role);
